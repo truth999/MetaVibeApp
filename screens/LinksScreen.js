@@ -44,7 +44,7 @@ export default class LinksScreen extends React.Component {
           value={firstQuery}
        />
 
-<Card style={{margin: 3}}>
+      <Card style={{margin: 3}}>
         <Card.Content style={{paddingBottom: 10}}>
           <Title>Park Meetup</Title>
           <Paragraph>20s meetup at the park at 16:00</Paragraph>
@@ -52,16 +52,14 @@ export default class LinksScreen extends React.Component {
         <Card.Cover source={{ uri: 'https://placeimg.com/640/480/nature?t=1557059912909' }} />
        </Card>
 
-          {this.state.data && this.state.data.map((el,i) => (
-               <Card style={{margin: 3}} key={i}>
-        <Card.Content style={{paddingBottom: 10}}>
-          <Title>{el.out[0].s2}</Title>
-          <Paragraph>{el.out[0].s3}</Paragraph>
-        </Card.Content>
-       </Card>
-
-
-          ))}
+      {this.state.data && this.state.data.map((el,i) => (
+           <Card style={{margin: 3}} key={i}>
+            <Card.Content style={{paddingBottom: 10}}>
+              <Title>{el.out[0].s2}</Title>
+              <Paragraph>{el.out[0].s3}</Paragraph>
+            </Card.Content>
+           </Card>
+      ))}
 
        
        <Card style={{margin: 3}}>
